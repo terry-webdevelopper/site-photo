@@ -1,0 +1,74 @@
+<header class="header">
+    <div class="logo">
+        <a href="/"><img src="../assets/uploads/mon_logo.jpg" title="logo" alt="logo" width="30" class="mon_logo"/></a>
+    </div>
+    <nav id="top">
+        <div class="openMenu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <ul class="mainMenu">
+            <a href="/">
+                <li>accueil</li>
+            </a>
+
+            <a href="{{ path('prestations') }}" > 
+                <li>prestations</li>
+            </a>
+
+            <a href="{{ path('tarifs') }}">
+                <li>tarifs</li>
+            </a>
+
+            <a href="{{ path('portfolio') }}">
+                <li>portfolio</li>
+            </a>
+
+            <a href="{{ path('apropos')}}">
+                <li>a propos</li>
+            </a>
+
+            <a href="{{path('contact')}}">
+                <li>contact</li>
+            </a>
+            {% if app.user and ('ROLE_USER' in app.user.roles) %}
+            {# {{path('name')}} #}
+                <a href="{{path('profil',{id:app.user.id})}}">
+                    <li>Mes photos</li>
+                </a>
+            {% endif %}
+            {# si est connecté et est admin... #}
+            {% if app.user and ('ROLE_ADMIN' in app.user.roles) %}
+            {# {{path('name')}} #}
+                <a href="{{path('admin')}}">
+                    <li>Administration</li>
+                </a>
+            {% endif %}
+            {# si est connecté, il verra "se déconnecter" #}
+            {% if app.user %}
+                <a href="{{path('app_logout')}}">
+                    <li>Se deconnecter</li>
+                </a>
+            {# sinon "se connecter" ou " s'inscrire" #}
+            {% else %}
+                <a href="{{path('app_login')}}">
+                    <li>Se connecter</li>
+                </a>
+                <a href="{{path('app_register')}}">
+                    <li>S'inscrire</li>
+                </a>
+            {% endif %}
+
+            <div class="closeMenu">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <span class="icons">
+                <i class="fa-brands fa-facebook" style="color:#1228ED"></i>
+                <i class="fa-brands fa-instagram" style="color:#ED1212"></i>
+                <i class="fa-brands fa-linkedin" style="color:#fff"></i>
+                <i class="fa-brands fa-github" style="color:#000"></i>
+            </span>
+        </ul>
+    </nav>
+    <script src="../assets/js/app.js"></script>
+</header>
+

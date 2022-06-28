@@ -1,0 +1,99 @@
+{% extends 'base.html.twig' %}
+{% block title %}PRESTATIONS{% endblock %}
+{% block body %}
+
+    <div class="presta">
+                <h1 class="prestaPhoto">MES PRESTATIONS PHOTOS</h1>
+                <h2 class="titre_presta">DES SOLUTIONS ADAPTEES A TOUS VOS BESOINS</h2>
+                <p class="p_presta" id="para_presta">Je propose un vaste panel de prestations photos et je suis en mesure de proposer des solutions adaptées aux
+                    besoins de chacun. Cliquez sur l'une des catégories ci-dessous pour en découvrir davantage.</p>
+                <div class="photos_presta">
+                    <div class="photo_presta_1">
+                        <img src="../assets/uploads/img/mariage.jpg" alt="mariage" title="mariage" width="350"/>
+                        <h6>PHOTOS DE MARIAGE</h6>
+                        <p class="p_presta_1">Ce jour sera sans doute l’un des plus beaux de votre vie. Il mérite des images exceptionnelles, que
+                            vous
+                            pourrez garder à tout jamais. Un reportage photo de mariage, c’est l’assurance de capter les plus
+                            beaux
+                            moments de cette journée tout en conservant leur authenticité.</p>
+                    </div>
+
+                    <div class="photo_presta_2">
+                       <img src="../assets/uploads/img/thecouple.jpg" alt="couple" title="couple" width="350"/>
+                        <h6>PHOTOS DE COUPLE</h6>
+                        <p class="p_presta_2"> Vous vous aimez et vous le dites tous les jours. Et pourquoi pas l’immortaliser avec des photos ? Une
+                            séance photos de couple, c’est un moment spécial. Un moment où le photographe se fait tout petit
+                            pour laisser s’exprimer l’amour qu’il y a entre vous.</p>
+                    </div>
+
+                    <div class="photo_presta_3">
+                        <img src="../assets/uploads/img/grossesse.jpg" alt="grossesse" title="grossesse" width="350"/>
+                        <h6>PHOTOS DE FAMILLE & PHOTOS DE GROSSESSE</h6>
+                        <p class="p_presta_3">Que vous soyez deux et demi, trois, quatre, cinq, ou plus, une séance de photos en famille est un
+                            moment de joie et de bonne humeur. Des jeux, des sourires, de la tendresse… Tous les éléments sont
+                            réunis pour avoir de belles images que vous garderez pendant de nombreuses années.</p>
+                    </div>
+                </div>
+
+            <div class="autres_presta">
+                <h2 class="titre_presta">VOUS CHERCHEZ D'AUTRES PRESTATIONS PHOTOS ?</h2>
+                <div class="p_presta">Et vous ne la trouvez pas sur mon site? Ne vous inquiétez pas, ce site est encore en construction et
+                    j'ajouterai
+                    d'autres catégories. Vous représentez une entreprise souhaitant développer sa communication avec des
+                    images
+                    corporate? Besoin d'étoffer votre book de modèle photo? A la recherche d'un photographe pour des
+                    portraits
+                    photos pour un emploi? Je suis probablement le photographe qu'il vous faut!</div>
+            </div>
+        </div>
+
+        <div class="slide-container">
+            <span class="slider-span" id="slider-span1"></span>
+            <span class="slider-span" id="slider-span2"></span>
+            <span class="slider-span" id="slider-span3"></span>
+            <span class="slider-span" id="slider-span4"></span>
+            <span class="slider-span" id="slider-span5"></span>
+            <span class="slider-span" id="slider-span6"></span>
+            <span class="slider-span" id="slider-span7"></span>
+
+            <div class="image-slider">
+                <div class="slides-div" id="slide-1">
+                    <img src="../assets/uploads/img/anaistony.jpg" alt="" class="img" id="img1"/>
+                    <a href="#slider-span1" class="button" id="button-1"></a>
+                </div>
+                <div class="slides-div" id="slide-2">
+                    <img src="../assets/uploads/img/bouquet.jpg" alt="" class="img" id="img2"/>
+                    <a href="#slider-span2" class="button" id="button-2"></a>
+                </div>
+                <div class="slides-div" id="slide-3">
+                    <img src="../assets/uploads/img/cindyarthur.jpg" alt="" class="img" id="img3"/>
+                    <a href="#slider-span3" class="button" id="button-3"></a>
+                </div>
+                <div class="slides-div" id="slide-4">
+                    <img src="../assets/uploads/img/couple.jpg" alt="" class="img" id="img4"/>
+                    <a href="#slider-span4" class="button" id="button-4"></a>
+                </div>
+                <div class="slides-div" id="slide-5">
+                    <img src="../assets/uploads/img/elodiecyril.jpg" alt="" class="img" id="img5"/>
+                    <a href="#slider-span5" class="button" id="button-5"></a>
+                </div>
+                <div class="slides-div" id="slide-6">
+                    <img src="../assets/uploads/img/eloisepaul.jpg" alt="" class="img" id="img6"/>
+                    <a href="#slider-span6" class="button" id="button-6"></a>
+                </div>
+                <div class="slides-div" id="slide-7">
+                    <img src="../assets/uploads/img/famille.jpg" alt="" class="img" id="img7"/>
+                    <a href="#slider-span7" class="button" id="button-7"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bloc_8">
+            <p class="black_background">"L'ART DE LA PHOTOGRAPHIE EST D'IMMORTALISER DES PORTRAITS MUETS, ET D'EN FAIRE NAÎTRE DES PORTRAITS
+                PARLANTS."</p>
+            <form class="contact-form-presta">
+                <a href="/Contact"><input type="submit" class="contact-form-btn-ac" value="CONTACTEZ-MOI"/></a>
+			</form>
+    </div>
+
+{% endblock %}

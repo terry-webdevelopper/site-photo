@@ -2,18 +2,42 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
+        <title>
+            {% block title %}Welcome!{% endblock %}
+        </title>
         {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
-        {% endblock %}
 
+            {# fonts #}
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@900&family=Zen+Kaku+Gothic+Antique:wght@300&display=swap" rel="stylesheet">
+            <!-- Bootstrap core CSS -->
+            <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+            {# cdn pour pouvoir utiliser les fontawesome #}
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            {# css #}
+            <link rel="stylesheet" href="../assets/css/style.css">
+        {% endblock %}
+        
         {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
+            <script src="../assets/js/like.js" defer></script>
+            <script src="../assets/js/bootstrap.bundle.min.js" defer></script>
+            <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" defer integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="dashboard.js"></script>
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        {# header #}
+        {% include "header.html.twig" %}
+        {# fin header #}
+        {# body #}
+        <main>
+            {% block body %}
+            
+            {% endblock %}
+        </main>
+        {# fin body #}
+        {# footer #}
+        {% include "footer.html.twig" %}
+        {# fin footer #}
     </body>
 </html>

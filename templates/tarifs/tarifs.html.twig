@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+{% block title %}TARIFS{% endblock %}
+{% block body %}
+<div>
+            <h1 class="titre_tarifs tarifs">MES PRESTATIONS PHOTOS</h1>
+            <h2 class="titre_tarifs">DES SOLUTIONS ADAPTÉES A TOUS VOS BESOINS<br/>TARIFS DE REPORTAGES DE MARIAGES</h2>
+            <p class="p_tarifs">Tout comme pour chaque mariage, mes prestations peuvent être adaptées à votre mariage. Pour obtenir un devis personnalisé, laissez-moi un message en m'expliquant votre projet et je vous recontacterai rapidement.</p>
+            <div id="flexContainer">
+                <div class="threeCards">
+                    <div class="head">
+                        <h2 id="spanPrix">A PARTIR DE <span>550 €</span></h2>
+                        <div class="price">
+                            <h1>Reportages de mariage</h1>
+                        </div>
+                        <div class="les_details">
+                        <div class="details">Plusieurs formules couvrant l'intégralité de votre mariage ou juste l'essentiel.</div>
+                        <div class="details">Séances photos "fiançailles" et "day-after" (suivant formule choisie).</div>
+                        <div class="details">Sélection et traitement individuel de chaque photo.</div>
+                        <div class="details">Mise à disposition des photos HD, sans logo, sur un espace protégé de mon site.</div>
+                        <div class="details">Réalisation de livre photos de haute qualité(suivant formule choisie).</div>
+                        <div class="details">Rencontre, échanges et conseils tout au long de vos préparatifs.</div>
+                        </div>
+                        <div class="contact-form-tarif">
+                            <a href="{{ path('contact') }}">
+                                <button class="contact-form-btn-ac">CONTACTEZ-MOI</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="threeCards">
+                    <div class="head">
+                        <h2 id="spanPrix">90 €</h2>
+                        <div class="price">
+                            <h1>Séance essentielle</h1>
+                        </div>
+                        <div class="les_details">
+                        <div class="details">Un moment en famille ou en couple.</div>
+                        <div class="details">45 minutes de prise de vues.</div>
+                        <div class="details">20 photos HD avec traitement numérique pour les sublimer, sans logo.</div>
+                        <div class="details">Mise à disposition sur un espace privatif.</div>
+                        </div>
+                        <div class="contact-form-tarif">
+                            <a href="{{ path('contact') }}">
+                                <button class="contact-form-btn-ac">CONTACTEZ-MOI</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="threeCards">
+                    <div class="head">
+                        <h2 id="spanPrix">150 €</h2>
+                        <div class="price">
+                            <h1>Séance coup de coeur</h1>
+                        </div>
+                        <div class="les_details">
+                        <div class="details">Un moment en famille ou en couple.</div>
+                        <div class="details">Jusqu'à 1h30mn de prise de vues.</div>
+                        <div class="details">50 photos HD avec traitement numérique pour les sublimer, sans logo.</div>
+                        <div class="details">Mise à disposition sur un espace privatif.</div>
+                        <div class="details">Commande d'un livre photos possible (à partir de 60 €)</div>
+                        </div>
+                        <div class="contact-form-tarif">
+                            <a href="{{ path('contact') }}">
+                                <button class="contact-form-btn-ac">CONTACTEZ-MOI</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}

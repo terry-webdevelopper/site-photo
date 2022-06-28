@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}PROFIL{% endblock %}
+
+{% block body %}
+<div class="profil">
+        {% if is_granted('ROLE_ADMIN') or is_granted('ROLE_ADMIN', user.roles)==true %}
+            <a href="/send_photo/{{user.id}}">ENVOYER PHOTO</a>
+        {% endif %}
+
+        <h1 class="utilisateur">Compte utilisateur:</h1>
+        <div class="identite">
+            <span class="persona">NOM : {{user.nom}}</span><br>
+            <span class="persona">PRENOM : {{user.prenom}}</span>
+        </div>
+        <div class="picture_box">
+            {% for photo in photosByUser %}
+                <div  class="picture">
+                    <div style="position:relative; width:500px" >
+                        {% if is_granted('ROLE_ADMIN', user.roles)==false %}
+                            {% if photo.aime %}
+                                <button class="like-btn" id="{{photo.id}}" style="position: absolute; top:20px; right:20px; font-size:40px; color:red; background:transparent; border:transparent;">
+                                    <i id="{{photo.id}}" class="fa-solid fa-heart"></i>
+                                </button>
+                            {% else %}
+                                <button class="like-btn" id="{{photo.id}}" style="position: absolute; top:20px; right:20px; font-size:40px; color:#fff; background:transparent; border:transparent;">
+                                <i id="{{photo.id}}" class="fa-solid fa-heart"></i>
+                                </button>
+                            {% endif %}
+                        {% else %}
+                            {% if photo.aime %}
+                                <button disabled id="{{photo.id}}" style="position: absolute; top:20px; right:20px; font-size:40px; color:red; background:transparent; border:transparent;">
+                                    <i id="{{photo.id}}" class="fa-solid fa-heart"></i>
+                                </button>
+                            {% else %}
+                                <button disabled id="{{photo.id}}" style="position: absolute; top:20px; right:20px; font-size:40px; color:#fff; background:transparent; border:transparent;">
+                                <i id="{{photo.id}}" class="fa-solid fa-heart"></i>
+                                </button>
+                            {% endif %}
+                        {% endif %}
+
+                        {% if is_granted('ROLE_ADMIN') %}
+                            <button class="delete-btn" id="{{photo.id}}" style="position: absolute; top:10px; left:20px; font-size:20px; color:red; background:transparent; border:transparent;">
+                                <i id="{{photo.id}}" class="fa-solid fa-xmark"></i>
+                            </button>
+                        {% endif %}
+                    
+                        <img src="/assets/uploads/img/{{photo.name}}" title="photos de {{user.prenom}} {{user.nom}}" alt="photos de {{user.prenom}} {{user.nom}}" width="500">
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

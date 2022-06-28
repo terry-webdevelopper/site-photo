@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ACCUEIL{% endblock %}
+
+{% block body %}
+    <section class="body_accueil">
+        <div class="section">
+            <div class="frame">
+                <div class="words">
+                    <h1>Terry BIGOUNDOU</h1>
+                    <h3 class="main-title">PHOTOGRAPHE</h3>
+                </div>
+            </div>
+
+            <div class="bloc_1 photos"></div>
+            <div class="bloc_2">
+                <h3 class="titre">UN ÉVENEMENT MARQUANT A VENIR</h3>
+                <p class="paragraphe_accueil">Vous recherchez un photographe de mariage, de couple, de grossesse (et d'autres événements) dans le Grand-Est? Vous souhaitez faire une séance photos ou avoir des images d'un événement familial pour profiter d'images que vous garderez toute votre vie? Il est naturel de vouloir faire appel à un photographe professionnel. Passionné et consciencieux, je saurai immortaliser les plus beaux moments de votre vie.</p>
+                <h3 class="titre">PHOTOGRAPHE DE MARIAGE EN LORRAINE ET AU DELÀ</h3>
+                <p class="paragraphe_accueil">Vous préparez l'organisation du plus beau jour de votre vie et vient la question du choix du photographe de mariage. Pour être passé par là en 2019, je vous comprends! En effet, c'est un choix compliqué et on ne peut pas se permettre d'erreur. Pour ce jour exceptionnel. Cela vous permettra de profiter pleinement de la journée et d'avoir de très beaux souvenirs pour votre album de mariage et vos proches.</p>
+            </div>
+            <div class="bloc_3 photos"></div>
+            <div class="bloc_4">
+                <h3 class="titre">SÉANCES PHOTOS DE COUPLE EN LORRAINE</h3>
+                <p class="paragraphe_accueil">Un événement particulier, un cadeau original pour votre bien aimé(e) ou simplement l'envie d'immortaliser votre amour en images? Oui, toutes les occasions sont bonnes pour faire un shooting photo en amoureux. Vous êtes habitués aux séances photos ou c'est votre première? Pas de souci, je saurai vous mettre à l'aise tout en respectant votre façon d'être pour obtenir de belles photos, naturelles et spontanées.</p>
+            </div>
+            <div class="bloc_5 photos"></div>
+            <div class="bloc_6">
+                <h3 class="titre">PHOTOS DE FAMILLE ET DE GROSSESSE EN LORRAINE</h3>
+                <p class="paragraphe_accueil">Pour une petite ou une grande occasion, ou juste par plaisir. Offrez-vous une séance photos en famille ou à l'occasion d'une grossesse. A votre domicile ou dans le lieu de votre choix, nous nous retrouverons pour une séance photos emplie de douceur et de bonne humeur. Ces images marqueront les plus beaux moments de votre vie et vous pourrez en faire profiter tous vos proches.</p>
+            </div>
+            <div class="bloc_7 photos"></div>
+            <div class="bloc_8">
+                <p class="black_background">MES IMAGES VOUS PLAISENT? VOUS RECHERCHEZ UN PHOTOGRAPHE DE MARIAGE OU DE COUPLE EN LORRAINE ET VOUS VOULEZ EN SAVOIR PLUS SUR MA FAÇON DE TRAVAILLER? CONTACTEZ-MOI!</p>
+                <div class="contact-form-accueil">
+                    <a href="{{ path('contact') }}">
+                        <button class="contact-form-btn-ac"/>FORMULAIRE DE CONTACT</button>
+                    </a> 
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
